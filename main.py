@@ -6,25 +6,23 @@ This program analyzes how well two people work together based on their
 preferences and habits. It uses conditional statements and boolean logic
 to determine team synergy and collaboration potential.
 
-Complete all TODO sections to create a working synergy quiz!
+Complete the TODO sections to implement the conditional logic!
 """
 
-# TODO 1: Display welcome message and get user names
+# Welcome message and input collection (COMPLETED FOR YOU)
 print("🤝 FRIEND TEAM SYNERGY QUIZ 🤝")
 print("=================================")
 print()
 print("Let's see how well you and your friend work together!")
 print()
 
-# TODO: Get both people's names and store them in variables
-# Hint: Use input() to ask "Person 1, what's your name?" and "Person 2, what's your name?"
-person1_name = "TODO"  # TODO: Replace with input() to get person 1's name
-person2_name = "TODO"  # TODO: Replace with input() to get person 2's name
-
+# Get both people's names
+person1_name = input("Person 1, what's your name? ")
+person2_name = input("Person 2, what's your name? ")
 print(f"Hi {person1_name} and {person2_name}! Let's discover your teamwork potential.")
 print()
 
-# TODO 2: Collect activity preferences
+# Collect activity preferences
 print("🎯 ACTIVITY PREFERENCES")
 print(f"{person1_name}, what's your favorite weekend activity?")
 print("(a) outdoor adventures  (b) gaming/movies  (c) studying/reading  (d) social events")
@@ -35,164 +33,154 @@ print("(a) outdoor adventures  (b) gaming/movies  (c) studying/reading  (d) soci
 person2_activity = input("Your choice: ").lower()
 print()
 
-# TODO 3: Collect study habits
+# Collect study habits
 print("📚 STUDY HABITS")
 print(f"{person1_name}, how do you prefer to study?")
 print("(a) alone quietly  (b) with music  (c) in groups  (d) short bursts")
-person1_study = "TODO"  # TODO: Replace with input() to get person 1's study preference
+person1_study = input("Your choice: ").lower()
 
 print(f"{person2_name}, how do you prefer to study?")
 print("(a) alone quietly  (b) with music  (c) in groups  (d) short bursts")
-person2_study = "TODO"  # TODO: Replace with input() to get person 2's study preference
+person2_study = input("Your choice: ").lower()
 print()
 
-# TODO 4: Collect personality types
+# Collect personality types
 print("🎭 PERSONALITY TYPE")
 print(f"{person1_name}, which describes you best?")
 print("(a) outgoing leader  (b) creative thinker  (c) analytical planner  (d) supportive friend")
-person1_personality = "TODO"  # TODO: Replace with input() to get person 1's personality type
+person1_personality = input("Your choice: ").lower()
 
 print(f"{person2_name}, which describes you best?")
 print("(a) outgoing leader  (b) creative thinker  (c) analytical planner  (d) supportive friend")
-person2_personality = "TODO"  # TODO: Replace with input() to get person 2's personality type
+person2_personality = input("Your choice: ").lower()
 print()
 
-# TODO 5: Collect schedule preferences
+# Collect schedule preferences
 print("⏰ DAILY SCHEDULE")
 person1_morning = input(f"{person1_name}, are you more productive in the morning? (yes/no): ").lower()
-person2_morning = "TODO"  # TODO: Ask person 2 the same question about morning productivity
+person2_morning = input(f"{person2_name}, are you more productive in the morning? (yes/no): ").lower()
 print()
 
-# TODO 6: Initialize synergy score
+# Initialize synergy score
 synergy_score = 0
 total_categories = 4
 
-# TODO 7: Analyze activity synergy using if/elif/else
+# =============================================================================
+# YOUR TASK: Complete the conditional logic below!
+# =============================================================================
+
 print("🤝 SYNERGY ANALYSIS")
 print("=================================")
 print()
 
+# 1: Activity Synergy Analysis
 print("Activity Synergy: ", end="")
-# TODO: Complete this if/elif/else chain for activity synergy
+
+# TODO: Complete this if/elif/else chain
 if person1_activity == person2_activity:
     print("PERFECT MATCH!")
-    print(f"- You both love the same activities!")
-    print("- Recommendation: Plan regular activities together!")
+    print("- You both love the same activities!")
     synergy_score += 1
 elif (person1_activity == "a" and person2_activity == "d") or (person1_activity == "d" and person2_activity == "a"):
-    # TODO: Handle outdoor + social combination
     print("GREAT COMBINATION!")
-    print("- Outdoor adventures and social events complement each other!")
-    print("- Recommendation: Try outdoor group activities!")
+    print("- Outdoor adventures and social events work well together!")
     synergy_score += 0.8
-elif False:  # TODO: Replace False with condition for gaming/movies + studying/reading using 'or'
+elif False:  # TODO: Replace False with condition using 'or' - if one person likes gaming/movies ("b") OR studying/reading ("c")
+             #       AND the other likes studying/reading ("c") OR gaming/movies ("b")
     print("COMPLEMENTARY INTERESTS!")
-    print("- You balance each other's interests well!")
-    print("- Recommendation: Help each other try new activities!")
+    print("- You balance entertainment and learning well!")
     synergy_score += 0.6
 else:
     print("DIFFERENT INTERESTS")
-    print(f"- {person1_name} and {person2_name} have different activity preferences")
-    print("- Recommendation: Try alternating activities!")
+    print("- You have different preferences, but that's okay!")
     synergy_score += 0.3
 
 print()
 
-# TODO 8: Analyze study synergy
+# 2: Study Synergy Analysis
 print("Study Synergy: ", end="")
-# TODO: Create if/elif/else for study habits
-# Use boolean logic (and/or) to check for collaborative study styles
 
-if False:  # TODO: Replace False with condition to check if both prefer group study (person1_study == "c" and person2_study == "c")
+# TODO: Create complete if/elif/else chain for study habits
+if False:  # TODO: Replace False - Check if BOTH prefer group study ("c") using 'and'
     print("PERFECT MATCH!")
-    print("- You both love group study sessions")
-    print("- Recommendation: Form a study group together!")
+    print("- You both love group study sessions!")
     synergy_score += 1
-elif False:  # TODO: Replace False with condition to check if both prefer quiet study (alone or with music) using 'or'
+elif False:  # TODO: Replace False - Check if BOTH prefer quiet study ("a" or "b") using 'and' and 'or'
+             # Hint: (person1_study == "a" or person1_study == "b") and (person2_study == "a" or person2_study == "b")
     print("COMPATIBLE STYLES!")
-    print("- You both prefer quieter study environments")
-    print("- Recommendation: Study in the same space quietly!")
+    print("- You both prefer quieter study environments!")
     synergy_score += 0.7
-elif False:  # TODO: Replace False with condition to check if one prefers groups and other prefers bursts using 'and'
+elif False:  # TODO: Replace False - Check if ONE prefers group study ("c") AND the other prefers short bursts ("d")
+             # Use 'and' and 'or' to check both combinations
     print("GOOD BALANCE!")
-    print("- You can help each other with different study approaches")
-    print("- Recommendation: Try alternating study methods!")
+    print("- You can help each other with different approaches!")
     synergy_score += 0.5
 else:
     print("DIFFERENT APPROACHES")
-    print("- You have different study preferences")
-    print("- Recommendation: Respect each other's study styles!")
+    print("- You have different study styles!")
     synergy_score += 0.2
 
 print()
 
-# TODO 9: Analyze personality synergy using complex boolean logic
+# 3: Personality Synergy Analysis  
 print("Personality Synergy: ", end="")
-# TODO: Create if/elif/else chain with boolean operators
 
-# Check for perfect leadership combinations
-if (person1_personality == "a" and person2_personality == "d") or (person1_personality == "d" and person2_personality == "a"):
-    # TODO: Handle leader + supportive friend combination
+# TODO: Create if/elif/else chain for personality combinations
+if False:  # TODO: Replace False - Check for leader ("a") + supportive friend ("d") combination using 'and' and 'or'
+           # Hint: (person1_personality == "a" and person2_personality == "d") or (person1_personality == "d" and person2_personality == "a")
     print("GREAT TEAM!")
-    print("- Leadership pairs well with supportive nature")
-    print("- Recommendation: You'll complement each other perfectly!")
+    print("- Leadership pairs well with supportive nature!")
     synergy_score += 1
-elif False:  # TODO: Replace False with condition to check if both are creative thinkers OR both are analytical planners
+elif False:  # TODO: Replace False - Check if BOTH are creative ("b") OR BOTH are analytical ("c") using 'and' and 'or'
     print("SIMILAR MINDS!")
-    print("- You think in similar ways")
-    print("- Recommendation: Collaborate on creative or analytical projects!")
+    print("- You think in similar ways!")
     synergy_score += 0.8
-elif False:  # TODO: Replace False with condition to check for creative + analytical combination using boolean logic
+elif False:  # TODO: Replace False - Check for creative ("b") + analytical ("c") combination using boolean logic
     print("BALANCED TEAM!")
-    print("- Creativity and analysis make a powerful combination")
-    print("- Recommendation: Work together on complex projects!")
+    print("- Creativity and analysis work well together!")
     synergy_score += 0.7
 else:
     print("DIVERSE PERSONALITIES")
-    print("- You bring different strengths to the partnership")
-    print("- Recommendation: Learn from each other's approaches!")
+    print("- You bring different strengths!")
     synergy_score += 0.4
 
 print()
 
-# TODO 10: Analyze schedule synergy
+# 4: Schedule Synergy Analysis
 print("Schedule Synergy: ", end="")
-# TODO: Use boolean logic to compare morning preferences
 
-if False:  # TODO: Replace False with condition to check if both are morning people using 'and'
+# TODO: Create if/elif/else for morning preferences
+if False:  # TODO: Replace False - Check if BOTH are morning people using 'and'
     print("EXCELLENT TIMING!")
-    print("- You're both morning people")
-    print("- Recommendation: Schedule activities for morning hours!")
+    print("- You're both morning people!")
     synergy_score += 1
-elif False:  # TODO: Replace False with condition to check if both are NOT morning people using 'and' and comparing to "no"
+elif False:  # TODO: Replace False - Check if BOTH are NOT morning people using 'and'
+             # Hint: person1_morning == "no" and person2_morning == "no"
     print("NIGHT OWLS UNITE!")
-    print("- You both prefer later hours")
-    print("- Recommendation: Plan evening study sessions and activities!")
+    print("- You both prefer later hours!")
     synergy_score += 1
 else:
     print("DIFFERENT SCHEDULES")
-    print("- You have different productive hours")
-    print("- Recommendation: Find compromise times that work for both!")
+    print("- You have different productive hours!")
     synergy_score += 0.3
 
 print()
 
-# TODO 11: Calculate final synergy percentage and display results
+# 5: Calculate and Display Final Results
 final_percentage = int((synergy_score / total_categories) * 100)
-
 print("🎉 OVERALL TEAM SYNERGY: ", end="")
-# TODO: Use if/elif/else to display synergy level based on percentage
 
-if final_percentage >= 90:
+# TODO: Create if/elif/else chain for final percentage ranges
+if False:  # TODO: Replace False - Check for 90% or higher
     print(f"{final_percentage}% - PERFECT PARTNERSHIP MATCH!")
     message = "You two are destined to be an amazing team!"
-elif False:  # TODO: Replace False with condition to check for 75-89% range
+elif False:  # TODO: Replace False - Check for 75-89% range
     print(f"{final_percentage}% - STRONG PARTNERSHIP POTENTIAL!")
     message = "You have great potential for working together effectively!"
-elif False:  # TODO: Replace False with condition to check for 50-74% range  
+elif False:  # TODO: Replace False - Check for 50-74% range
     print(f"{final_percentage}% - GOOD TEAMWORK POTENTIAL!")
     message = "You could develop effective collaboration with some effort!"
-elif False:  # TODO: Replace False with condition to check for 25-49% range
+elif False:  # TODO: Replace False - Check for 25-49% range
     print(f"{final_percentage}% - SOME COLLABORATION POTENTIAL!")
     message = "You have some common ground to build teamwork on!"
 else:
@@ -202,42 +190,17 @@ else:
 print()
 print(f"{person1_name} and {person2_name}, {message}")
 
-# TODO 12: Add final recommendations based on boolean combinations
+# TODO 6: BONUS - Advanced Boolean Logic (Optional Challenge)
 print()
-# TODO: Create a final if statement using boolean logic to give special recommendations
+print("🎯 BONUS RECOMMENDATIONS:")
 
-if False:  # TODO: Replace False with condition to check if they have high synergy (>= 80) AND similar schedules using 'and'
-    print("BONUS RECOMMENDATION: You're extremely well-matched for teamwork!")
-    print("Consider being study partners or project teammates!")
-elif False:  # TODO: Replace False with condition to check if they have different activities BUT same study habits using 'and'
-    print("BONUS RECOMMENDATION: Your study synergy is strong!")
-    print("Focus on academic collaboration while exploring new activities!")
-elif False:  # TODO: Replace False with condition using 'or' to check if either person is a leader OR supportive friend
-    print("BONUS RECOMMENDATION: You have great leadership dynamics!")
-    print("Consider working together on group projects or team activities!")
+# TODO: Use complex boolean logic to give special recommendations
+if False:  # TODO: Replace False - Check if high synergy (>= 80%) AND both are morning people
+    print("BONUS: You're extremely well-matched for morning teamwork!")
+elif False:  # TODO: Replace False - Check if same study habits BUT different activities
+    print("BONUS: Your study synergy is strong!")
+elif False:  # TODO: Replace False - Check if either person is a leader ("a") OR supportive ("d")
+    print("BONUS: You have great leadership dynamics!")
 
 print("=================================")
-
-# TODO 13: Extra challenge - ask if they want to compare with another pair
-# TODO: Ask "Would you like to compare your score with another pair? (yes/no): "
-# TODO: If yes, ask for the other pair's percentage and compare using if/elif/else
-
-compare_choice = "TODO"  # TODO: Replace with input() to get user choice for comparison
-
-if False:  # TODO: Replace False with condition to check if they want to compare scores
-    other_score = 0  # TODO: Replace 0 with int(input()) to get the other pair's synergy percentage
-    print()
-    print("📊 COMPARISON RESULTS:")
-    
-    if False:  # TODO: Replace False with condition to check if current score is higher than other score
-        print(f"Congratulations! Your {final_percentage}% beats their {other_score}%!")
-        print("You two have stronger teamwork potential than the other pair!")
-    elif False:  # TODO: Replace False with condition to check if scores are equal
-        print(f"It's a tie! Both pairs scored {final_percentage}%!")
-        print("You're equally well-matched for teamwork - that's awesome!")
-    else:
-        print(f"The other pair scored higher with {other_score}% vs your {final_percentage}%")
-        print("But remember, every partnership brings unique strengths!")
-
-print()
 print("Thanks for taking the Friend Team Synergy Quiz! 🎉")

@@ -25,18 +25,20 @@ After clicking the GitHub Classroom link and accepting the assignment:
 
 ## Your Task
 
-Create a **Friend Team Synergy Quiz** by completing the `main.py` file. This fun program will help peers get to know each other by analyzing their preferences!
+Create a **Friend Team Synergy Quiz** by completing the conditional logic in the `main.py` file. The input collection code is already provided - you just need to implement the `if`/`elif`/`else` chains with boolean logic!
 
 **Interactive Element**: After completing your program, **team up with a classmate** and run the quiz on each other's preferences to see your synergy scores!
 
-Replace all TODO comments with working code to:
+**Your Focus**: Complete the 6 TODO sections that implement conditional logic:
 
-1. **Get user information**: Ask for both people's names
-2. **Collect preferences**: Ask about favorite activities, study habits, and personality traits
-3. **Calculate synergy**: Use `if`/`elif`/`else` and boolean logic (`and`/`or`) to determine how well you work together
-4. **Display results**: Show a detailed synergy report with recommendations
+1. **Activity Synergy**: Complete the `elif` condition using `or` operators
+2. **Study Synergy**: Create a complete `if`/`elif`/`else` chain with `and`/`or` logic
+3. **Personality Synergy**: Implement complex boolean combinations
+4. **Schedule Synergy**: Use `and` operators for morning preferences  
+5. **Final Results**: Create percentage-based `if`/`elif`/`else` chain
+6. **Bonus**: Advanced boolean logic combinations (optional challenge)
 
-**Time Estimate: 25-35 minutes**
+**Time Estimate: 20-30 minutes**
 
 ## Testing Your Program
 
