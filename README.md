@@ -7,7 +7,6 @@ By completing this activity, you will practice:
 - Combining conditions with boolean operators (`and`, `or`)
 - Working with user input and string comparisons
 - Creating interactive programs that respond to multiple conditions
-- Writing a complete Python program with conditional logic
 
 ## Setup
 
@@ -29,7 +28,7 @@ Create a **Friend Team Synergy Quiz** by completing the conditional logic in the
 
 **Interactive Element**: After completing your program, **team up with a classmate** and run the quiz on each other's preferences to see your synergy scores!
 
-**Your Focus**: Complete the 6 TODO sections that implement conditional logic:
+**Your Focus**: Complete the TODO sections that implement conditional logic:
 
 1. **Activity Synergy**: Complete the `elif` condition using `or` operators
 2. **Study Synergy**: Create a complete `if`/`elif`/`else` chain with `and`/`or` logic
@@ -37,8 +36,6 @@ Create a **Friend Team Synergy Quiz** by completing the conditional logic in the
 4. **Schedule Synergy**: Use `and` operators for morning preferences  
 5. **Final Results**: Create percentage-based `if`/`elif`/`else` chain
 6. **Bonus**: Advanced boolean logic combinations (optional challenge)
-
-**Time Estimate: 20-30 minutes**
 
 ## Testing Your Program
 
