@@ -106,7 +106,6 @@ if False:  # TODO: Replace False - Check if BOTH prefer group study ("c") using 
     print("- You both love group study sessions!")
     synergy_score += 1
 elif False:  # TODO: Replace False - Check if BOTH prefer quiet study ("a" or "b") using 'and' and 'or'
-             # Hint: (person1_study == "a" or person1_study == "b") and (person2_study == "a" or person2_study == "b")
     print("COMPATIBLE STYLES!")
     print("- You both prefer quieter study environments!")
     synergy_score += 0.7
@@ -127,7 +126,6 @@ print("Personality Synergy: ", end="")
 
 # TODO: Create if/elif/else chain for personality combinations
 if False:  # TODO: Replace False - Check for leader ("a") + supportive friend ("d") combination using 'and' and 'or'
-           # Hint: (person1_personality == "a" and person2_personality == "d") or (person1_personality == "d" and person2_personality == "a")
     print("GREAT TEAM!")
     print("- Leadership pairs well with supportive nature!")
     synergy_score += 1
